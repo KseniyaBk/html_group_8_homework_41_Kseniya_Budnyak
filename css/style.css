@@ -1,0 +1,35 @@
+body { font-family: "Sintony", "Quicksand", sans-serif; margin: 0; }
+
+.container { max-width: 1180px; width: 100%; min-width: 320px; margin: 0 auto; }
+
+p { margin: 0; }
+
+a { text-decoration: none; }
+
+h1 { margin: 0; }
+
+button { border: none; }
+
+/******************HEADER************** */
+header { display: flex; flex-direction: row; align-items: center; }
+
+.logo { display: inline-block; width: 25%; text-align: right; background: #63c6ae; color: #ffffff; box-sizing: border-box; }
+.logo a { padding: 7% 11%; display: block; }
+.logo a img { width: 116px; height: 19px; }
+
+.menu nav { display: none; }
+.menu nav a { color: #737c85; font-size: 14px; text-transform: uppercase; font-weight: bold; }
+.menu nav a:hover { color: #63c6ae; }
+
+.promo { background: url("../images/Infusion-promo.png"); background-repeat: no-repeat; padding: 17.6%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #ffffff; }
+.promo h1 { background: #63c6ae; color: #ffffff; padding: 30px 20px; display: inline-block; text-transform: uppercase; margin-bottom: 6px; }
+.promo .wrap_text { background: #242a2c; display: inline-block; padding: 20px; font-size: 17px; width: 46%; text-align: center; }
+.promo button { display: block; border: 2px solid white; width: 160px; height: 55px; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; background-color: rgba(36, 42, 44, 0.2); color: white; font-family: "Sintony"; font-size: 20px; text-transform: uppercase; line-height: 1.5; }
+
+/*************************MEDIA SCREEN******************* */
+@media screen and (min-width: 760px) { .menu { display: inline-block; padding-left: 12px; }
+  .menu nav { display: inline-block; }
+  .menu nav a { padding: 0 25px; }
+  .menu button { display: none; }
+  h1 { font-size: 30px; }
+  .wrap_text { margin-bottom: 39px; } }
