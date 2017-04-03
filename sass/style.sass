@@ -1,4 +1,4 @@
-$colorAquamarine: #63c6ae
+$colorSelect: #63c6ae
 $colorSlateGrey: #737c85
 $colorWhite: #ffffff
 $myfont: 'Sintony','Quicksand', sans-serif
@@ -13,7 +13,7 @@ $myfont: 'Sintony','Quicksand', sans-serif
 
 body
   font-family: $myfont
-  margin: 0
+  @extend %resetIndent
 
 .container
   max-width: 1180px
@@ -22,13 +22,12 @@ body
   padding: 0 15px
   box-sizing: border-box
 
-p
-  margin: 0
+p,h1
+  @extend %resetIndent
 
 a
   text-decoration: none
-h1
-  margin: 0
+
 button
   border: none
   @extend %fontSintony
@@ -57,6 +56,7 @@ header
 .logo img
   width: 116px
   height: 19px
+
 .wrap
   height: 100%
   width: 100%
@@ -73,12 +73,12 @@ header
     text-transform: uppercase
     font-weight: bold
     &:hover
-      color: $colorAquamarine
+      color: $colorSelect
 
 .burger
   display: inline-block
   background: transparent
-  color: $colorAquamarine
+  color: $colorSelect
   height: 30px
   width: 40px
   cursor: pointer
@@ -92,13 +92,9 @@ header
     position: absolute
     margin: 3px
     bottom: 0
-    background: $colorAquamarine
+    background: $colorSelect
     +borderRadius(2px)
     +transition (all 200ms ease-out)
-
-//%sizeBurger
-//  height: 4px
-//  width: 34px
 
 div.x, div.y, div.z
   height: 4px
@@ -110,7 +106,7 @@ div.z
   top: 30px
 div.collapse
   top: 20px
-  background: $colorAquamarine
+  background: $colorSelect
   +transition (all 70ms ease-out)
 
 
@@ -134,7 +130,7 @@ div.rotate135
 
 
 div.navbar
-  background: $colorAquamarine
+  background: $colorSelect
 
 div.circle
   border-radius: 50%
@@ -270,6 +266,8 @@ main::before
   article
     text-align: center
     max-width: 280px
+    position: relative
+    padding-bottom: 40px
 
   .line-center
     width: 80px
@@ -278,21 +276,46 @@ main::before
       +borderRadius(50%)
       border: 4px solid #f3f3f3
       margin-top: -57px
+
   h2
     text-align: left
     font-size: 21px
     color: $colorSlateGrey
     line-height: 1.286
+    padding-left: 23px
+    z-index: 2
   p
     text-align: left
     font-size: 14px
     color: $colorSlateGrey
     line-height: 1.714
+    padding-left: 23px
+    z-index: 2
 
 
 .posts__blog article:last-child
   margin-right: 0
 
+.block__active
+  height: 100%
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  opacity: 0
+  border: 10px solid $colorSelect
+
+article:hover .block__active
+  opacity: 1
+
+
+article:hover h2
+  color: $colorSelect
+article:hover p
+  color: $colorSelect
+article:hover .line-center img
+  border: 4px solid $colorSelect
+  color: $colorSelect
 
 .middle_block
   padding: 3.6% 0
@@ -357,7 +380,7 @@ footer
   .block-size
     flex-grow: 1
   ul
-    margin: 0
+    @extend %resetIndent
     padding: 0
   ul li a
     display: inline-block
