@@ -265,6 +265,7 @@ main::before
     position: relative
     padding-bottom: 40px
     margin-bottom: 25px
+    border-left: 1px solid #dbe1e7
 
   .line-center
     width: 80px
@@ -356,14 +357,34 @@ article:hover .line-center img
 blockquote
   font-style: italic
   text-align: center
-blockquote::before
-  content: '\0022'
-  font-style: italic
-  text-align: left
-blockquote::after
-  content: '\0022'
-  font-style: italic
-  text-align: left
+  .quote__body
+    font-weight: bold
+    font-size: 30px
+  .quote__author
+    font-size: 20px
+
+/**********************SLIDER********************/
+.slick-dots li
+  border: 2px solid #fff
+  border-radius: 50%
+  position: relative
+  display: inline-block
+  width: 15px
+  height: 15px
+  margin: 0 5px
+  padding: 4px
+  cursor: pointer
+  box-sizing: border-box
+
+.slick-dots li.slick-active button:before
+  opacity: .75
+  color: transparent
+.slick-dots li button:before
+  color: transparent
+
+
+
+
 /*************************FOOTER**********************/
 footer
   background: #242a2c
@@ -433,3 +454,12 @@ footer
     margin-left: 0
     margin-right: 20px
 
+  .slick-arrow
+    background: #51b29a
+    border-radius: 50%
+  .slick-next
+    content: 'url(../images/next.svg)'
+    background-size: 15px
+  .slick-prev
+    content: 'url(../images/prev.svg)'
+    background-size: 15px

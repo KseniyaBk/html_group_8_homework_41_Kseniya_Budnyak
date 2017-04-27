@@ -290,7 +290,8 @@ main::before {
     max-width: 280px;
     position: relative;
     padding-bottom: 40px;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    border-left: 1px solid #dbe1e7; }
   .posts__blog .line-center {
     width: 80px;
     height: 80px; }
@@ -384,16 +385,31 @@ article:hover .line-center img {
 blockquote {
   font-style: italic;
   text-align: center; }
+  blockquote .quote__body {
+    font-weight: bold;
+    font-size: 30px; }
+  blockquote .quote__author {
+    font-size: 20px; }
 
-blockquote::before {
-  content: '"';
-  font-style: italic;
-  text-align: left; }
+/**********************SLIDER******************* */
+.slick-dots li {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  padding: 4px;
+  cursor: pointer;
+  box-sizing: border-box; }
 
-blockquote::after {
-  content: '"';
-  font-style: italic;
-  text-align: left; }
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: transparent; }
+
+.slick-dots li button:before {
+  color: transparent; }
 
 /*************************FOOTER********************* */
 footer {
@@ -469,6 +485,18 @@ footer {
 
   .text__box button {
     margin-left: 0;
-    margin-right: 20px; } }
+    margin-right: 20px; }
+
+  .slick-arrow {
+    background: #51b29a;
+    border-radius: 50%; }
+
+  .slick-next {
+    content: "url(../images/next.svg)";
+    background-size: 15px; }
+
+  .slick-prev {
+    content: "url(../images/prev.svg)";
+    background-size: 15px; } }
 
 /*# sourceMappingURL=style.css.map */

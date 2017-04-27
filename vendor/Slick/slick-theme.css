@@ -21,25 +21,21 @@
 {
     font-size: 0;
     line-height: 0;
-
     position: absolute;
     top: 50%;
-
     display: block;
-
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-
     cursor: pointer;
-
     color: transparent;
     border: none;
     outline: none;
     background: transparent;
+    z-index:15;
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -79,44 +75,44 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 0;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+    right: 0;
     left: auto;
 }
 .slick-prev:before
 {
-    content: '←';
+    content: url("../images/arrow-prev.svg");
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: url("../images/arrow-prev.svg");
 }
 
 .slick-next
 {
-    right: -25px;
+    right: 0;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -25px;
+    left: 0;
 }
 .slick-next:before
 {
-    content: '→';
+    content: url("../images/arrow-next.svg");
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: url("../images/arrow-next.svg");
 }
 
 /* Dots */
 .slick-dotted.slick-slider
 {
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .slick-dots
