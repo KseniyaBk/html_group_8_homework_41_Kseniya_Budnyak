@@ -85,7 +85,7 @@ main::before { content: ""; width: 0; height: 0; border-style: solid; border-wid
 .posts__blog h2 { text-align: left; font-size: 21px; color: #737c85; line-height: 1.286; padding-left: 23px; z-index: 2; }
 .posts__blog p { text-align: left; font-size: 14px; color: #737c85; line-height: 1.714; padding-left: 23px; z-index: 2; }
 
-.posts__blog article:last-child { margin-right: 0; }
+.posts__blog article:last-child { margin-right: 0;  }
 
 .block__active { height: 100%; position: absolute; left: 0; right: 0; top: 0; opacity: 0; border: 10px solid #63c6ae; }
 
